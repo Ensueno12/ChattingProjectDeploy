@@ -1,6 +1,9 @@
-language: java
+language:
+  - java
+  - node_js
 jdk:
   - oraclejdk11
+  - 12
 
 branches:
   only:
