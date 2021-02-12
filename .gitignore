@@ -325,8 +325,8 @@ $RECYCLE.BIN/
 *.lnk
 
 ### Gradle ###
-#.gradle //임시
-#gradle //임시
+.gradle
+gradle
 .idea
 build/
 
