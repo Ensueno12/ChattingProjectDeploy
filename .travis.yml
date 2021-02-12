@@ -39,7 +39,7 @@ deploy:
     wait-until-deployed: true
     on:
       repo: hwangsero/ChattingProjectDeploy #Github 주소
-      branch: refactoring
+      branch: master
 
   - provider: codedeploy
     access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
@@ -53,4 +53,4 @@ deploy:
     wait-until-deployed: true
     on:
       repo: hwangsero/ChattingProjectDeploy
-      branch: refactoring
+      branch: master
