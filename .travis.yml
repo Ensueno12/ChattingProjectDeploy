@@ -3,6 +3,7 @@ language:
   - node_js
 jdk:
   - oraclejdk11
+node_js:
   - 12
 
 branches:
