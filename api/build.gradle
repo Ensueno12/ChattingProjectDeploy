@@ -141,7 +141,3 @@ task buildAngular(type: Copy, dependsOn: 'buildWebAppAngular') {
 //    }
 }
 
-
-bootJar {
-    mainClassName = 'com.clone.chat.ChatApplication'
-}
