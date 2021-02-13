@@ -2,8 +2,12 @@ matrix:
   include:
     - language: java
       jdk: oraclejdk11
+      before_script:
+        - cd api
     - language: node.js
       node_js: "12.0"
+      before_script:
+        - cd front-angular
 
 branches:
   only:

@@ -140,3 +140,8 @@ task buildAngular(type: Copy, dependsOn: 'buildWebAppAngular') {
     print("buildAngular END : ${webappDir} ${templatesDir}")
 //    }
 }
+
+
+bootJar {
+    mainClassName = 'com.clone.chat.ChatApplication'
+}
