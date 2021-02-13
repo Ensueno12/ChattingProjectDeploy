@@ -53,7 +53,7 @@ public class ChatApplication implements CommandLineRunner {
         SpringApplicationBuilder builder = new SpringApplicationBuilder(ChatApplication.class);
         String appendYml = "spring.config.location="
                 + "classpath:application.yml,"
-                + "/app/config/practice/real-application.yml,"
+//                + "/app/config/practice/real-application.yml,"
                 + "/app/config/practice/aws-s3-image-key.yml";
         SpringApplication build = builder.build();
         build.addListeners(new ApplicationPidFileWriter());
