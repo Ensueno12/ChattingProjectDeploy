@@ -51,11 +51,11 @@ public class ChatApplication implements CommandLineRunner {
 
     public static void main(String[] args) {
         SpringApplicationBuilder builder = new SpringApplicationBuilder(ChatApplication.class);
-//        String appendYml = "spring.config.location="
-//                + "classpath:application.yml,"
-////                + "/app/config/practice/real-application.yml,"
-//                + "/app/config/practice/application-real.yml";
-        SpringApplication build = builder.build();
+        String appendYml = "spring.config.location="
+                + "classpath:application.yml,"
+//                + "/app/config/practice/real-application.yml,"
+                + "/home/ubuntu/app/config/practice/application-real.yml";
+        SpringApplication build = builder.properties(appendYml).build();
         build.addListeners(new ApplicationPidFileWriter());
         ConfigurableApplicationContext run = builder.run(args);
     }
