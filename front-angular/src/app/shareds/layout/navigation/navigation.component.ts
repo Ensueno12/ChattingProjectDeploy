@@ -25,7 +25,7 @@ export class NavigationComponent implements OnInit {
     ngOnInit() {
         this.userService.user$.pipe(filter(it => it.authorities && it.authorities.length > 0)).subscribe((userTokenContain: UserTokenContain) => {
             this.userTokenContain = userTokenContain;
-            const url = "/anon-apis/users/" + this.userTokenContain.id;
+            const url = "http://localhost:9000/anon-apis/users/" + this.userTokenContain.id;
             this.api.get<User>(url).subscribe(it => {
             this.user = it;
 
