@@ -101,5 +101,5 @@ project(':api') {
 }
 
 bootJar {
-	mainClassName = ''
+	mainClassName = 'api.src.main.java.com.clone.chat.ChatApplication'
 }

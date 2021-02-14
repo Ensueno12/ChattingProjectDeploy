@@ -4,8 +4,9 @@ apply plugin: 'cz.habarta.typescript-generator'
 //    dependsOn "buildRestDoc"
 //}
 bootJar {
+    mainClassName = 'com.clone.chat.ChatApplication'
     dependsOn "buildAngular"
-    dependsOn asciidoctor
+//    dependsOn asciidoctor
     from ("${project.projectDir}/src/main/resources/templates/docs") {
         into 'BOOT-INF/classes/templates/docs'
     }
@@ -59,6 +60,9 @@ asciidoctor {
 //    println("--> ${outputDir}")
 //    print('-asciidoctor after-')
 }
+
+
+
 //asciidoctor.doLast {
 //    println("do lastttt")
 //    copy {
@@ -142,6 +146,6 @@ task buildAngular(type: Copy, dependsOn: 'buildWebAppAngular') {
 }
 
 
-bootJar {
-    mainClassName = 'com.clone.chat.ChatApplication'
-}
+//bootJar {
+//    mainClassName = 'com.clone.chat.ChatApplication'
+//}
