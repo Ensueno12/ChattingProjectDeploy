@@ -50,14 +50,23 @@ public class ChatApplication implements CommandLineRunner {
     PasswordEncoder passwordEncoder;
 
     public static void main(String[] args) {
-        SpringApplicationBuilder builder = new SpringApplicationBuilder(ChatApplication.class);
         String appendYml = "spring.config.location="
                 + "classpath:application.yml,"
 //                + "/app/config/practice/real-application.yml,"
                 + "/app/config/practice/application-real.yml";
-        SpringApplication build = builder.build();
-        build.addListeners(new ApplicationPidFileWriter());
-        ConfigurableApplicationContext run = builder.properties(appendYml).run(args);
+
+        new SpringApplicationBuilder(ChatApplication.class)
+                .properties(appendYml)
+                .run(args);
+
+//        SpringApplicationBuilder builder = new SpringApplicationBuilder(ChatApplication.class);
+//        String appendYml = "spring.config.location="
+//                + "classpath:application.yml,"
+////                + "/app/config/practice/real-application.yml,"
+//                + "/app/config/practice/application-real.yml";
+//        SpringApplication build = builder.build();
+//        build.addListeners(new ApplicationPidFileWriter());
+//        ConfigurableApplicationContext run = builder.properties(appendYml).run(args);
     }
 
     @EventListener
