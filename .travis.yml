@@ -11,7 +11,7 @@ cache: # gradle을 통해 받은 의존성들을 캐시에 저장하여 같은 �
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
 
-script: "./gradlew clean build"
+script: "./gradlew clean :api:bootjar"
 
 before_install :
   - chmod +x gradlew # build 시 gradle 권한 부여
