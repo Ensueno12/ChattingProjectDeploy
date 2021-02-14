@@ -55,7 +55,7 @@ public class ChatApplication implements CommandLineRunner {
                 + "classpath:application.yml,"
 //                + "/app/config/practice/real-application.yml,"
                 + "/app/config/practice/aws-s3-image-key.yml";
-        SpringApplication build = builder.build();
+        SpringApplication build = builder.properties(appendYml).build();
         build.addListeners(new ApplicationPidFileWriter());
         ConfigurableApplicationContext run = builder.run(args);
     }
